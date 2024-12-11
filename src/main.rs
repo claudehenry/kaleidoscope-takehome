@@ -32,7 +32,7 @@ impl Canvas {
 
     fn set_origin<S: Shape>(&self, shape: &Handle<S>, origin: (f64, f64)) {
         // todo: possibly useful to return a Result here indicating whether the shape existed and
-        // was modified
+        // was modified. Also possibly desirable to crash on poisoned lock.
         if let Some(mut s) = shape.write().ok() {
             s.set_origin(origin)
         }
