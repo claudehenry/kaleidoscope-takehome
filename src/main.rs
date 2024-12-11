@@ -152,7 +152,7 @@ mod tests {
         canvas.set_origin(&single_handle, (20.0, 20.0));
         assert_eq!(canvas.get_origin(&single_handle), Some((20.0, 20.0)));
 
-        // check the layout of the canvas buffer reflects the
+        // check the layout of the canvas buffer reflects the change we just made
         for (i, handle) in canvas.shapes.iter().enumerate() {
             assert_eq!(
                 handle.read().unwrap().origin(),
