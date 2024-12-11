@@ -123,7 +123,7 @@ mod tests {
     }
 
     #[test]
-    fn single_handle_mutation() {
+    fn internal_layout() {
         // not a fan of unit tests that 'know' implementation details, in this case the Canvas'
         // buffer, so this is not as much a test as an illustration of handle tracking and uniqueness
         let mut canvas = Canvas::new();
